@@ -1,16 +1,25 @@
-Create Project
+# [Automated Testing With Node.js And Selenium Webdriver](https://medium.com/@bmshamsnahid/automated-testing-with-selenium-webdriver-and-node-js-f99f64720352)
 
-    npm init
+Automated google search operation.
 
-    npm i chai@4.1.2 chai-as-promised@7.1.1 chromedriver@2.41.0 faker@4.1.0 mocha@5.2.0 mochawesome@3.0.3 selenium-webdriver@4.0.0-alpha.1 --save-dev --unsafe-perm=true --allow-root
+[Step By Step Tutorial](https://medium.com/@bmshamsnahid/automated-testing-with-selenium-webdriver-and-node-js-f99f64720352)
 
-    mocha test script: mocha test --reporter mochawesome --reporter-options autoOpen=true
+## Run application
+Clone the repository
 
-Create directory and files
+```bash
+git clone https://github.com/bmshamsnahid/Automation-With-Selenium-And-Node.js.git
+```
 
-mkdir lib test utils
+Install dependencies
+```bash
+npm i chai@4.1.2 chai-as-promised@7.1.1 chromedriver@2.41.0 faker@4.1.0 mocha@5.2.0 mochawesome@3.0.3 selenium-webdriver@4.0.0-alpha.1 --save-dev --unsafe-perm=true --allow-root
+```
 
-touch lib/basePage.js lib/homePage.js test/homePage.test.js utils/fakeData.js utils/locator.js
+Run test
+```bash
+npm test
+```
 
 Folder Structure
 
@@ -28,13 +37,6 @@ Folder Structure
     │   └── locator.js              # HTML and CSS identifier for elements to test
     ├── ...
 
-create selector utils/locator.js:
-    searchInputSelectorId: 'lst-ib',
-    searchButtonSelectorName: 'btnK',
-    resultConfirmationId: 'resultStats'
-    
-create and render fake data from fakeData.js
+## License
 
-build up our generic helper methods in basePage.js
-build up out test page healper mehod in HomePage.js
-finally create test homePage for assertion
+MIT

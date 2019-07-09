@@ -1,0 +1,133 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2019-07-09T19:45:09.023Z",
+    "end": "2019-07-09T19:45:45.568Z",
+    "duration": 36545,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "danger",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "cd91e56a-68ad-44f2-80df-fa4030d7a8bd",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "1748ec64-d592-4484-ab9e-e81d7c576fd4",
+        "title": "Google search automated testing",
+        "fullFile": "/home/nahid/Node/Automation-With-Selenium-And-Node.js/test/homePage.test.js",
+        "file": "/test/homePage.test.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Google search automated testing \"before each\" hook",
+            "timedOut": false,
+            "duration": 3407,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new Page();\ndriver = page.driver;\nawait page.visit('https://www.google.com/');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "8944f123-6bd9-4188-8de1-4612a668f003",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Google search automated testing \"after each\" hook",
+            "timedOut": false,
+            "duration": 73,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4d5641da-9f03-4740-8140-6204b3c165b7",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "find the input box and google search button",
+            "fullTitle": "Google search automated testing find the input box and google search button",
+            "timedOut": false,
+            "duration": 15006,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const result = await page.findInputAndButton();\nexpect(result.inputEnabled).to.equal(true);\nexpect(result.buttonText).to.include('Google');",
+            "err": {
+              "message": "TimeoutError: Looking for element\nWait timed out after 15003ms",
+              "estack": "TimeoutError: Looking for element\nWait timed out after 15003ms\n    at /home/nahid/Node/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)"
+            },
+            "isRoot": false,
+            "uuid": "1e31ed89-df08-4b2e-8d7b-ea78bc6f1f1c",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "put keyword in search box and click search button",
+            "fullTitle": "Google search automated testing put keyword in search box and click search button",
+            "timedOut": false,
+            "duration": 15010,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
+            "pending": false,
+            "code": "const result = await page.submitKeywordAndGetResult();\nexpect(result.length).to.be.above(10);",
+            "err": {
+              "message": "TimeoutError: Looking for element\nWait timed out after 15010ms",
+              "estack": "TimeoutError: Looking for element\nWait timed out after 15010ms\n    at /home/nahid/Node/Automation-With-Selenium-And-Node.js/node_modules/selenium-webdriver/lib/webdriver.js:834:17\n    at processTicksAndRejections (internal/process/task_queues.js:89:5)"
+            },
+            "isRoot": false,
+            "uuid": "47e01e4d-1465-400b-9044-4c958b85ad55",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [],
+        "failures": [
+          "1e31ed89-df08-4b2e-8d7b-ea78bc6f1f1c",
+          "47e01e4d-1465-400b-9044-4c958b85ad55"
+        ],
+        "pending": [],
+        "skipped": [],
+        "duration": 30016,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2019
+}
